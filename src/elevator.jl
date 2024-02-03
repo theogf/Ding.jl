@@ -1,3 +1,7 @@
+"""
+Plays an elevator music after an initial time and stops it when the evaluation
+is finished.
+"""
 function elevator_expr(ex)
     quote
         evaluated = false
@@ -14,7 +18,12 @@ function elevator_expr(ex)
             end
             kill(p)
         end
-        ΔT = @elapsed result = $(ex)
+        try
+            result = $(ex)
+        catch e
+            evaluated = true
+            rethrow(e)
+        end
         evaluated = true
         result
     end
