@@ -1,1 +1,1 @@
-const MIN_T = 0.5 # Minimum duration
+const MIN_T = 2.0 # Minimum duration
