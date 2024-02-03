@@ -7,19 +7,19 @@ function elevator_expr(ex)
         evaluated = false
         start = time_ns()
         @async begin
-            sleep(Ding.MIN_T)
+            sleep(Ding.options[].elevator.minimum_duration)
             if !evaluated
-                p = Ding.play("data/elevator.mp3")
+                p = Ding.play(Ding.rand_sound_file(Ding.elevator_files))
             else
                 return
             end
             while !evaluated
-                sleep(0.1)
+                sleep(Ding.options[].elevator.refresh_rate)
             end
             kill(p)
         end
-        try
-            result = $(ex)
+        result = try
+            $(ex)
         catch e
             evaluated = true
             rethrow(e)

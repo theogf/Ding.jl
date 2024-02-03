@@ -1,0 +1,5 @@
+[ding]
+minimum_duration = 0.5
+
+[elevator]
+minimum_duration = 1.0
