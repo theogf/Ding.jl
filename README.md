@@ -11,9 +11,9 @@ Sounds alerts when long-duration commands are run on the REPL
 
 ## TODO
 
-- [ ] Hook onto the REPL See [Alert.jl](https://github.com/haberdashPI/Alert.jl/blob/main/src/alert_repl.jl)
-- [ ] Define options for alerts
-- [ ] Download music files automatically
+- [X] Hook onto the REPL See [Alert.jl](https://github.com/haberdashPI/Alert.jl/blob/main/src/alert_repl.jl)
+- [X] Define options for alerts
+- [X] Download music files automatically
 - [ ] Allow to add new music files -> [Source for many open-source sound files](https://pixabay.com/sound-effects/search/beeps/)
 - [ ] Install `sox` automatically for every platform see [Artifacts page](https://pkgdocs.julialang.org/v1/artifacts/)
 - [ ] Allow to access `sox` options ([sox docs](https://linux.die.net/man/1/sox))
