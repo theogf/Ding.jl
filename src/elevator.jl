@@ -1,8 +1,8 @@
 """
-Plays an elevator music after an initial time and stops it when the evaluation
+Rewrite an expression such that an elevator music start playing after an initial time and stops it when the evaluation
 is finished.
 """
-function elevator_expr(ex)
+function elevator_expr(ex; min_duration::Real = options[].elevator.minimum_duration)
     quote
         evaluated = false
         start = time_ns()
@@ -29,6 +29,7 @@ function elevator_expr(ex)
     end
 end
 
+"Plays an elevator music along the given expression"
 macro elevator(ex)
-    elevator_expr(ex)
+    elevator_expr(ex; min_duration = 0)
 end

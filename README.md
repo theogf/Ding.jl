@@ -18,3 +18,5 @@ Sounds alerts when long-duration commands are run on the REPL
 - [ ] Install `sox` automatically for every platform see [Artifacts page](https://pkgdocs.julialang.org/v1/artifacts/)
 - [ ] Allow to access `sox` options ([sox docs](https://linux.die.net/man/1/sox))
 - [ ] Alternative to play sounds: [Sound.jl](https://github.com/JeffFessler/Sound.jl) to take raw sinus values
+- [ ] Allow to play another song when process finishes
+- [ ] Introduce fading between songs
