@@ -7,14 +7,14 @@ function elevator_expr(ex; min_duration::Real = options[].elevator.minimum_durat
         evaluated = false
         start = time_ns()
         @async begin
-            sleep(Ding.options[].elevator.minimum_duration)
+            sleep($(min_duration))
             if !evaluated
                 p = Ding.play(Ding.rand_sound_file(Ding.elevator_files))
             else
                 return
             end
             while !evaluated
-                sleep(Ding.options[].elevator.refresh_rate)
+                sleep($(options[].elevator.refresh_rate))
             end
             kill(p)
         end
