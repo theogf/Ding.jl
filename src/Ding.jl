@@ -35,7 +35,7 @@ include("options.jl")
 
 include("ding.jl")
 include("repl.jl")
-include("sox.jl")
+include("play.jl")
 include("elevator.jl")
 
 end
