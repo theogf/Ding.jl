@@ -2,6 +2,7 @@ module Ding
 
 using Configurations
 using DataDeps
+using FFplay_jll: ffplay
 
 
 include("data_sources.jl")
