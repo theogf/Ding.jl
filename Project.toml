@@ -1,7 +1,7 @@
 name = "Ding"
 uuid = "3926c259-39ba-4d74-9c2f-25ff6470b8c3"
 authors = ["theogf <theo.galyfajou@gmail.com> and contributors"]
-version = "1.0.0-DEV"
+version = "1.0.0"
 
 [deps]
 Configurations = "5218b696-f38b-4ac9-8b61-a12ec717816d"
@@ -9,7 +9,10 @@ DataDeps = "124859b0-ceae-595e-8997-d05f6a7a8dfe"
 FFplay_jll = "c4dce911-e170-5107-8314-c7bdc6785395"
 
 [compat]
-julia = "1"
+Configurations = "0.17"
+DataDeps = "0.7"
+FFplay_jll = "4"
+julia = "1.8"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
