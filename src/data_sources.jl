@@ -39,7 +39,7 @@ const elevator_files = Dict{String,Vector{String}}(
 )
 
 "Given a dictionary, get a random file and fetch its source."
-function rand_sound_file(dict::Dict{String,String})
+function rand_sound_file(dict::Dict{String})
     sound = rand(keys(dict))
     return joinpath(@datadep_str(sound), sound * ".mp3")
 end
