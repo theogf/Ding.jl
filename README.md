@@ -15,6 +15,13 @@ There are for now two exported macros: `@ding` and `@elevator`:
 - `@ding ex` will play a random bell sound at the end of the execution of `ex`.
 - `@elevator ex` will play a random elevator music while `ex` is running.
 
+Examples
+
+```julia
+@ding sleep(3)
+@elevator sleep(10)
+```
+
 ## REPL integration
 
 To avoid having to write these macros everywhere, there are two functions to directly integrate the sounds to your workflow: `ding_repl(activate=true)` and `ding_elevator(activate=true)`.
