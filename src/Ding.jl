@@ -33,7 +33,7 @@ export @ding, @elevator, ding_repl, elevator_repl
 
 include("options.jl")
 
-include("ding.jl")
+include("dong.jl")
 include("repl.jl")
 include("play.jl")
 include("elevator.jl")
