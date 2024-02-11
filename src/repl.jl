@@ -1,4 +1,5 @@
 # To be called at startup:
+"Enable a ding sound on all REPL commands taking more than a certain time."
 function ding_repl(activate::Bool = true)
     asts = Base.active_repl_backend.ast_transforms
     idx = findfirst(==(ding_expr), asts)
@@ -10,6 +11,7 @@ function ding_repl(activate::Bool = true)
     return
 end
 
+"Enable elevator music on all REPL commands taking more than a certain time."
 function elevator_repl(activate::Bool = true)
     asts = Base.active_repl_backend.ast_transforms
     idx = findfirst(==(elevator_expr), asts)
