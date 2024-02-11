@@ -10,7 +10,6 @@ include("data_sources.jl")
 function __init__()
     orig_key = get(ENV, "DATADEPS_ALWAYS_ACCEPT", nothing)
     ENV["DATADEPS_ALWAYS_ACCEPT"] = true
-    @info "Downloading audio files"
     for file_list in (ding_files, elevator_files)
         for (name, url) in pairs(file_list)
             register(

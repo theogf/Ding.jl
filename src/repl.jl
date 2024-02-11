@@ -4,8 +4,7 @@ function ding_repl(activate::Bool = true)
     idx = findfirst(==(ding_expr), asts)
     if activate && isnothing(idx)
         pushfirst!(asts, ding_expr)
-    else
-        !activate && !isnothing(idx)
+    elseif !activate && !isnothing(idx)
         deleteat!(asts, idx)
     end
     return
@@ -16,8 +15,7 @@ function elevator_repl(activate::Bool = true)
     idx = findfirst(==(elevator_expr), asts)
     if activate && isnothing(idx)
         pushfirst!(asts, elevator_expr)
-    else
-        !activate && !isnothing(idx)
+    elseif !activate && !isnothing(idx)
         deleteat!(asts, idx)
     end
     return
