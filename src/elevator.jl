@@ -4,16 +4,16 @@ is finished.
 """
 function elevator_expr(ex; min_duration::Real = options[].elevator.minimum_duration)
     quote
-        evaluated = false
+        _evaluated = Ref(false)
         start = time_ns()
         @async begin
             sleep($(min_duration))
-            if !evaluated
+            if !_evaluated[]
                 p = Ding.play(Ding.rand_sound_file(Ding.elevator_files))
             else
                 return
             end
-            while !evaluated
+            while !_evaluated[]
                 sleep($(options[].elevator.refresh_rate))
             end
             kill(p)
@@ -21,10 +21,10 @@ function elevator_expr(ex; min_duration::Real = options[].elevator.minimum_durat
         result = try
             $(ex)
         catch e
-            evaluated = true
+            _evaluated[] = true
             rethrow(e)
         end
-        evaluated = true
+        _evaluated[] = true
         result
     end
 end
