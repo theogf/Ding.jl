@@ -2,8 +2,12 @@
 Rewrite an expression such that an elevator music start playing after an initial time and stops it when the evaluation
 is finished.
 """
-function elevator_expr(ex; min_duration::Real = options[].elevator.minimum_duration)
-    quote
+function elevator_expr(
+    ex;
+    min_duration::Real = options[].elevator.minimum_duration,
+    _module = @__MODULE__
+)
+    esc(quote
         _evaluated = Ref(false)
         start = time_ns()
         @async begin
@@ -19,17 +23,15 @@ function elevator_expr(ex; min_duration::Real = options[].elevator.minimum_durat
             kill(p)
         end
         result = try
-            $(ex)
-        catch e
+            Core.eval($(_module), $(QuoteNode(ex)))
+        finally
             _evaluated[] = true
-            rethrow(e)
         end
-        _evaluated[] = true
         result
-    end
+    end)
 end
 
 "Plays an elevator music along the given expression"
 macro elevator(ex)
-    elevator_expr(ex; min_duration = 0)
+    elevator_expr(ex; min_duration = 0, _module = __module__)
 end

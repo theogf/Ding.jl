@@ -10,7 +10,7 @@ include("data_sources.jl")
 function __init__()
     orig_key = get(ENV, "DATADEPS_ALWAYS_ACCEPT", nothing)
     ENV["DATADEPS_ALWAYS_ACCEPT"] = true
-    for file_list in (ding_files, elevator_files)
+    for file_list in (ding_files, elevator_files, ohno_files)
         for (name, (url, hash)) in pairs(file_list)
             register(
                 DataDep(
@@ -29,7 +29,7 @@ function __init__()
     ENV["DATADEPS_ALWAYS_ACCEPT"] = @something orig_key false
 end
 
-export @ding, @elevator, ding_repl, elevator_repl
+export @ding, @elevator, @ohno, ding_repl, elevator_repl, ohno_repl
 
 include("options.jl")
 
@@ -37,5 +37,6 @@ include("dong.jl")
 include("repl.jl")
 include("play.jl")
 include("elevator.jl")
+include("ohno.jl")
 
 end
