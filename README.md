@@ -11,20 +11,23 @@ Sounds alerts when long-duration commands are run on the REPL
 
 ## Macros
 
-There are for now two exported macros: `@ding` and `@elevator`:
+There are for now three exported macros: `@ding`, `@ohno` and `@elevator`:
+
 - `@ding ex` will play a random bell sound at the end of the execution of `ex`.
 - `@elevator ex` will play a random elevator music while `ex` is running.
+- `@ohno ex` will play an error sound if the `ex` process is failing
 
 Examples
 
 ```julia
 @ding sleep(3)
 @elevator sleep(10)
+@ohno sqrt(-1)
 ```
 
 ## REPL integration
 
-To avoid having to write these macros everywhere, there are two functions to directly integrate the sounds to your workflow: `ding_repl(activate=true)` and `ding_elevator(activate=true)`.
+To avoid having to write these macros everywhere, there are two functions to directly integrate the sounds to your workflow: `ding_repl(activate=true)` `ohno_repl` and `elevator_repl(activate=true)`.
 If the execution in the REPL takes more than a (configurable) time, a ding will play at the end and an elevator music will play during the execution respectively.
 
 ## Configuration
