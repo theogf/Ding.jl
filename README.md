@@ -39,6 +39,8 @@ Although meager, the different options such as the minimum running time for the 
 All sounds will be downloaded in the first execution of `using Ding`. These files are royalty free and come from the sound bank [pixabay.com](https://pixabay.com).
 The sounds are played using `FFplay` which is a library of [`FFmpeg`](https://pixabay.com).
 
+[List of CLI music players](https://askubuntu.com/questions/115369/how-to-play-mp3-files-from-the-command-line)
+
 ## TODO
 
 - [ ] Allow to add new music files -> [Source for many open-source sound files](https://pixabay.com/sound-effects/search/beeps/)

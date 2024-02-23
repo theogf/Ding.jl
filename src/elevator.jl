@@ -8,12 +8,12 @@ function elevator_expr(
     _module = @__MODULE__
 )
     esc(quote
-        _evaluated = Ref(false)
+        _evaluated = Threads.Atomic{Bool}(false)
         start = time_ns()
         @async begin
             sleep($(min_duration))
             if !_evaluated[]
-                p = Ding.play(Ding.rand_sound_file(Ding.elevator_files))
+                p = Ding.play(Ding.rand_sound_file(Ding.elevator_files); loop = true)
             else
                 return
             end
