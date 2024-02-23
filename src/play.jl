@@ -1,9 +1,9 @@
 function play(file::AbstractString; loop = false)
     @assert isfile(file)
     ffplay() do exe
-        args = ["--nodisp", "-v", "0", "--autoexit"]
+        args = ["-nodisp", "-v", "0", "-autoexit"]
         if loop
-            push!(args, "--loop")
+            append!(args, ["-loop", "9999"])
         end
         @info Cmd(vcat(exe, args, file))
         run(
