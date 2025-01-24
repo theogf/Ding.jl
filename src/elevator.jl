@@ -32,6 +32,6 @@ function elevator_expr(
 end
 
 "Plays an elevator music along the given expression"
-macro elevator(ex)
-    elevator_expr(ex; min_duration = 0, _module = __module__)
+macro elevator(ex, macro_call)
+    elevator_expr(ex; min_duration = macro_call ? 0 : options[].elevator.minimum_duration, _module = __module__)
 end

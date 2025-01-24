@@ -5,7 +5,7 @@ function play(file::AbstractString; loop = false)
         if loop
             append!(args, ["-loop", "9999"])
         end
-        @info Cmd(vcat(exe, args, file))
+        @debug "Running play command $(Cmd(vcat(exe, args, file)))"
         run(
             addenv(
                 Cmd(vcat(exe, args, file)),

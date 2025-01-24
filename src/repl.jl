@@ -1,15 +1,27 @@
 # To be called at startup:
 "Enable a ding sound on all REPL commands taking more than a certain time."
-ding_repl(activate::Bool = true) = add_to_repl(ding_expr, activate)
+ding_repl(activate::Bool = true) = add_to_repl(add_ding, activate)
+add_ding(ex) = :(@ding $ex false)
 
 "Enable elevator music on all REPL commands taking more than a certain time."
-elevator_repl(activate::Bool = true) = add_to_repl(elevator_expr, activate)
+elevator_repl(activate::Bool = true) = add_to_repl(add_elevator, activate)
+add_elevator(ex) = :(@elevator $ex false)
 
 "Enable elevator music on all REPL commands taking more than a certain time."
-ohno_repl(activate::Bool = true) = add_to_repl(ohno_expr, activate)
+ohno_repl(activate::Bool = true) = add_to_repl(add_ohno, activate)
+add_ohno(ex) = :(@ohno $ex)
+
+"Toggle all the repl hooks at the same time."
+function full_repl(activate::Bool = true)
+  ding_repl(activate)
+  elevator_repl(activate)
+  ohno_repl(activate)
+end
+
+current_ast_transforms() = isdefined(Base, :active_repl_backend) ? Base.active_repl_backend.ast_transforms : REPL.repl_ast_transforms
 
 function add_to_repl(f, activate::Bool)
-    asts = Base.active_repl_backend.ast_transforms
+    asts = current_ast_transforms()
     idx = findfirst(==(f), asts)
     if activate && isnothing(idx)
         pushfirst!(asts, f)

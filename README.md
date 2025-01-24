@@ -49,6 +49,7 @@ The sounds are played using `FFplay` which is a library of [`FFmpeg`](https://pi
 - [ ] Add "failure" sound, when execution returns an error
 - [ ] Ensure order of sound playing (elevator -> ding)
 - [ ] Search for config file in more different paths.
+- [ ] Special ohno sound for `InterruptException`
 - [ ] Add more options such as
   - [ ] Exclude/Include list of sounds
   - [ ] Sound level

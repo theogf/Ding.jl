@@ -1,5 +1,6 @@
 module Ding
 
+using REPL
 using Configurations
 using DataDeps
 using FFplay_jll: ffplay
@@ -29,7 +30,7 @@ function __init__()
     ENV["DATADEPS_ALWAYS_ACCEPT"] = @something orig_key false
 end
 
-export @ding, @elevator, @ohno, ding_repl, elevator_repl, ohno_repl
+export @ding, @elevator, @ohno, ding_repl, elevator_repl, ohno_repl, full_repl
 
 include("options.jl")
 
