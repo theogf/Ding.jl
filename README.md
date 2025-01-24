@@ -48,8 +48,8 @@ The sounds are played using `FFplay` which is a library of [`FFmpeg`](https://pi
 - [ ] Allow to add new music files -> [Source for many open-source sound files](https://pixabay.com/sound-effects/search/beeps/)
 - [ ] Allow to play another song when process finishes
 - [ ] Introduce fading between songs
-- [ ] Add "failure" sound, when execution returns an error
-- [ ] Ensure order of sound playing (elevator -> ding)
+- [x] Add "failure" sound, when execution returns an error
+- [x] Ensure order of sound playing (elevator -> ding)
 - [ ] Search for config file in more different paths.
 - [ ] Special ohno sound for `InterruptException`
 - [ ] Add more options such as
