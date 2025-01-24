@@ -9,6 +9,8 @@
 
 Sounds alerts when long-duration commands are run on the REPL
 
+!!! This package does not work for MacOS at the moment due to the FFPlay artifact not working there.
+
 ## Macros
 
 There are for now three exported macros: `@ding`, `@ohno` and `@elevator`:
