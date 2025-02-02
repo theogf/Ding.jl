@@ -10,6 +10,6 @@ function ding_expr(ex; min_duration::Real = options[].ding.minimum_duration)
 end
 
 "Play a short sound after the execution is over"
-macro ding(ex, macro_call)
+macro ding(ex, macro_call = true)
     ding_expr(ex; min_duration = macro_call ? 0 : options[].ding.minimum_duration)
 end
