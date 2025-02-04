@@ -2,6 +2,7 @@ using DingDingDing
 using Test
 
 @testset "DingDingDing.jl" begin
-    @test_nowarn @ding a = 3
-    @test_nowarn @elevator sleep(3)
+    @ding a = 3
+    @elevator sleep(3)
+    @test_throws DomainError @ohno sqrt(-1)
 end
