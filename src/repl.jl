@@ -12,10 +12,14 @@ ohno_repl(activate::Bool = true) = add_to_repl(add_ohno, activate)
 add_ohno(ex) = :(@ohno $ex)
 
 "Toggle all the repl hooks at the same time."
-function full_repl(activate::Bool = true)
+function full_repl(activate::Bool = true, emoji_prompt::Bool = true)
   ding_repl(activate)
   elevator_repl(activate)
   ohno_repl(activate)
+  if emoji_prompt
+      first(Base.active_repl.interface.modes).prompt = "julia📢>"
+  end
+  return
 end
 
 current_ast_transforms() = isdefined(Base, :active_repl_backend) ? Base.active_repl_backend.ast_transforms : REPL.repl_ast_transforms

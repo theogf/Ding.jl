@@ -3,7 +3,7 @@ function ohno_expr(ex; _module = @__MODULE__)
         try
             Core.eval($(_module), $(QuoteNode(ex)))
         catch e
-            Ding.play(Ding.rand_sound_file(Ding.ohno_files))
+            DingDingDing.play(DingDingDing.rand_sound_file(DingDingDing.ohno_files))
             rethrow(e)
         end
     end)
