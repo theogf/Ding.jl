@@ -73,6 +73,6 @@ jobs:
         shell: julia --project=docs --color=yes {0}
         run: |
           using Documenter: DocMeta, doctest
-          using Ding
-          DocMeta.setdocmeta!(Ding, :DocTestSetup, :(using Ding); recursive=true)
-          doctest(Ding)
+          using DingDingDing
+          DocMeta.setdocmeta!(DingDingDing, :DocTestSetup, :(using DingDingDing); recursive=true)
+          doctest(DingDingDing)

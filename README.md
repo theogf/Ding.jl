@@ -1,9 +1,9 @@
-# Ding
+# DingDingDing
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://theogf.github.io/Ding.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://theogf.github.io/Ding.jl/dev/)
-[![Build Status](https://github.com/theogf/Ding.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/theogf/Ding.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/theogf/Ding.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/theogf/Ding.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://theogf.dev/DingDingDing.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://theogf.dev/DingDingDing.jl/dev/)
+[![Build Status](https://github.com/theogf/DingDingDing.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/theogf/DingDingDing.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/theogf/DingDingDing.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/theogf/DingDingDing.jl)
 [![Code Style: Blue](https://img.shields.io/badge/code%20style-blue-4495d1.svg)](https://github.com/invenia/BlueStyle)
 [![ColPrac: Contributor's Guide on Collaborative Practices for Community Packages](https://img.shields.io/badge/ColPrac-Contributor's%20Guide-blueviolet)](https://github.com/SciML/ColPrac)
 
@@ -38,7 +38,7 @@ Although meager, the different options such as the minimum running time for the 
 
 ## Details
 
-All sounds will be downloaded in the first execution of `using Ding`. These files are royalty free and come from the sound bank [pixabay.com](https://pixabay.com).
+All sounds will be downloaded in the first execution of `using DingDingDing`. These files are royalty free and come from the sound bank [pixabay.com](https://pixabay.com).
 The sounds are played using `FFplay` which is a library of [`FFmpeg`](https://pixabay.com).
 
 [List of CLI music players](https://askubuntu.com/questions/115369/how-to-play-mp3-files-from-the-command-line)

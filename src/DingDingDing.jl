@@ -1,4 +1,4 @@
-module Ding
+module DingDingDing
 
 using REPL
 using Configurations
@@ -34,7 +34,7 @@ export @ding, @elevator, @ohno, ding_repl, elevator_repl, ohno_repl, full_repl
 
 include("options.jl")
 
-include("dong.jl")
+include("ding.jl")
 include("repl.jl")
 include("play.jl")
 include("elevator.jl")

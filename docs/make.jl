@@ -1,14 +1,14 @@
-using Ding
+using DingDingDing
 using Documenter
 
-DocMeta.setdocmeta!(Ding, :DocTestSetup, :(using Ding); recursive=true)
+DocMeta.setdocmeta!(DingDingDing, :DocTestSetup, :(using DingDingDing); recursive=true)
 
 makedocs(;
-    modules=[Ding],
+    modules=[DingDingDing],
     authors="theogf <theo.galyfajou@gmail.com> and contributors",
-    sitename="Ding.jl",
+    sitename="DingDingDing.jl",
     format=Documenter.HTML(;
-        canonical="https://theogf.github.io/Ding.jl",
+        canonical="https://theogf.github.io/DingDingDing.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -18,6 +18,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/theogf/Ding.jl",
+    repo="github.com/theogf/DingDingDing.jl",
     devbranch="main",
 )

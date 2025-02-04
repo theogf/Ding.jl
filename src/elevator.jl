@@ -13,7 +13,7 @@ function elevator_expr(
         @async begin
             sleep($(min_duration))
             if !_evaluated[]
-                p = Ding.play(Ding.rand_sound_file(Ding.elevator_files); loop = true)
+                p = DingDingDing.play(DingDingDing.rand_sound_file(DingDingDing.elevator_files); loop = true)
             else
                 return
             end

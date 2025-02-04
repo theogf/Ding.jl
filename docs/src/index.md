@@ -1,14 +1,14 @@
 ```@meta
-CurrentModule = Ding
+CurrentModule = DingDingDing
 ```
 
 # Ding
 
-Documentation for [Ding](https://github.com/theogf/Ding.jl).
+Documentation for [DingDingDing](https://github.com/theogf/DingDingDing.jl).
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [Ding]
+Modules = [DingDingDing]
 ```

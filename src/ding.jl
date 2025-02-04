@@ -3,7 +3,7 @@ function ding_expr(ex; min_duration::Real = options[].ding.minimum_duration)
     esc(quote
         ΔT = @elapsed result = $(ex)
         if ΔT > $(min_duration) # in seconds
-            Ding.play(Ding.rand_sound_file(Ding.ding_files))
+            DingDingDing.play(DingDingDing.rand_sound_file(DingDingDing.ding_files))
         end
         result
     end)
